@@ -286,8 +286,3 @@
 
 </html>
 <%--  --%>
-<asp:checkbox runat="server"></asp:checkbox>
-<asp:checkboxlist runat="server"></asp:checkboxlist>
-<asp:dropdownlist runat="server"></asp:dropdownlist>
-<asp:hiddenfield runat="server" ID="safsaf"></asp:hiddenfield>
-<asp:radiobutton runat="server" ID="asfasf"></asp:radiobutton>
