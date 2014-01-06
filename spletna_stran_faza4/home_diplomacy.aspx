@@ -20,10 +20,6 @@
         google.load("visualization", "1", { packages: ["corechart"] });
         function drawChart() {
 
-
-
-
-
             var hf = document.getElementById("jason");
             var hfcharttype = document.getElementById("charttype");
             var response = $.parseJSON(hf.value);
@@ -40,11 +36,7 @@
                 row[1] = parseInt(response.Table1[i].assetsSum);
                 data.addRow(row);
 
-
-
-
             }
-
 
             var chart;
             if (hfcharttype.value == "1") {
@@ -168,7 +160,6 @@
                             <script type="text/javascript">
                                 //<![CDATA[
 
-
                                 if (typeof (Sys) != "undefined") {
                                     Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
                                 }
@@ -178,8 +169,6 @@
 
 
                                 }
-
-
 
                                 //]]>
                             </script>

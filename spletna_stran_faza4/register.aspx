@@ -51,6 +51,9 @@
                 <div id="enter-container-content">
                     <h2>Register</h2>
                         <form id="form1" runat="server">
+                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                <ContentTemplate>
                             <table style="/*width: 90%;*/" align="center">
                                 <tr style="height:80px">
                                     <td class="style1" colspan="3" align="center">
@@ -260,6 +263,8 @@
                                   DisplayMode ="BulletList" 
                                   ShowSummary ="true"
                                   HeaderText="Errors:" />
+                            </ContentTemplate>
+                            </asp:UpdatePanel>
                         </form>
                 </div>
             </div>

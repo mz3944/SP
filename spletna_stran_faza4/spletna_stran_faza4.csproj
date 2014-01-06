@@ -63,9 +63,6 @@
   <ItemGroup>
     <Content Include="about.html" />
     <Content Include="account.html" />
-    <Content Include="Copy %282%29 of register.html" />
-    <Content Include="Copy of register.aspx" />
-    <Content Include="Copy of register.html" />
     <Content Include="css\master.css" />
     <Content Include="gallery.html" />
     <Content Include="guide.html" />
@@ -74,10 +71,8 @@
     <Content Include="home_army.html" />
     <Content Include="home_buildings.html" />
     <Content Include="home_diplomacy.aspx" />
-    <Content Include="home_diplomacy.html" />
     <Content Include="home_economy.html" />
     <Content Include="home_map.html" />
-    <Content Include="home_market.html" />
     <Content Include="home_market.aspx" />
     <Content Include="home_technology.html" />
     <Content Include="images\army\barbed-spear.png" />
@@ -207,7 +202,6 @@
     <Content Include="multimedia\MedievalBattleMusic.mp3" />
     <Content Include="music.html" />
     <Content Include="MySql.Data.dll" />
-    <Content Include="register.html" />
     <Content Include="rules.html" />
     <Content Include="support.html" />
     <Content Include="Web.config" />
