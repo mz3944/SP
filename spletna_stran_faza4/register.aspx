@@ -32,8 +32,8 @@
                 <li id="help"><a href="help.html">Help</a>
                     <ul>
                         <li id="rules"><a href="rules.html">Rules</a>
-                            <li id="guide"><a href="guide.html">Guide</a>
-                                <li id="support"><a href="support.html">Support</a>
+                        <li id="guide"><a href="guide.html">Guide</a>
+                        <li id="support"><a href="support.html">Support</a>
                     </ul>
                 </li>
                 <li id="gallery"><a href="gallery.html">Gallery</a>

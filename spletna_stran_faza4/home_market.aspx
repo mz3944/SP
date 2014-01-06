@@ -77,9 +77,9 @@
                         </li>
                         <li id="army"><a href="home_army.html">Army</a>
                         </li>
-                        <li id="market"><a href="home_market.html">Market</a>
+                        <li id="market"><a href="home_market.aspx">Market</a>
                         </li>
-                        <li id="diplomacy"><a href="home_diplomacy.html">Diplomacy</a>
+                        <li id="diplomacy"><a href="home_diplomacy.aspx">Diplomacy</a>
                         </li>
                     </ul>
                 </div>
