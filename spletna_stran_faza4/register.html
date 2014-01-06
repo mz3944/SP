@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Vis Vires</title>
+    <meta charset="UTF-8">
+	<meta name="application-name" content="Vis Vires" />
+    <meta name="author" content="Matej Zrimsek" />
+    <meta name="keywords" content="Webbrowser game, Vis Vires, Strategy" />
+    <link rel="stylesheet" type="text/css" href="css/master.css" />
+	<script type = "text/javascript"  src = "js/change.js" >
+    </script>
+</head>
+<body>
+    <div id="outer">
+    </div>
+    <div id="page-container">
+        <img title="tower-whole" id="tower-whole" src="images/tower_whole.png" alt="tower" />
+		<a id="music" target="_blank" href="music.html"><img title="play music" src="images/lyre.png" alt="play music" /></a>
+        <header id="header">
+            <h1><a href="home.html"><img title="logo" src="images/logo.png" alt="Vis Vires" /></a></h1> 
+        </header>
+
+        <nav id="navigation">
+            <ul>
+                <li id="home"><a href="home.html">Home</a>
+                </li>
+                <li id="help"><a href="help.html">Help</a>
+                    <ul>
+                        <li id="rules"><a href="rules.html">Rules</a>
+                            <li id="guide"><a href="guide.html">Guide</a>
+                                <li id="support"><a href="support.html">Support</a>
+                    </ul>
+                    </li>
+                    <li id="gallery"><a href="gallery.html">Gallery</a>
+                    </li>
+                    <li id="account"><a href="account.html">Account</a>
+                    </li>
+                    <li id="about"><a href="about.html">About</a>
+                    </li>
+            </ul>
+        </nav>
+
+        <main id="enter-container">
+            <div id="enter-container-top"></div>
+            <div id="enter-container-middle1">
+                <div id="enter-container-content">
+                    <h2>Register</h2>
+					<form method="post" autocomplete="on" onsubmit="return checkForm(this);" action="/javascript/validate-password/"> <!-- nerabs && false, pa pomoje tud this ne   return (checkForm(this) && false)-->
+                        <fieldset>
+                            <legend>Personal information</legend>
+                            <p>
+                                <label>Name:</label>
+                                    <input id="name" name="name" type="text" placeholder="Enter your name" autofocus required>
+                                
+                            </p>
+                            <p>
+                                <label>Surname:</label>
+                                    <input id="surname" name="name" type="text" placeholder="Enter your surname" autofocus required>
+                                
+                            </p>
+                            <p>
+                                <label>E-mail address:</label>
+                                    <input id="email" name="email" type="email" placeholder="Enter your email address" pattern="([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})" required>
+                                
+                            </p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Game information</legend>
+                            <p>
+                                <label>Username:</label>
+                                    <input id="username" name="username" type="text" placeholder="Enter your game username" required>
+                                
+                            </p>
+							<div id="passInfo">Passwords must contain at least six characters, including uppercase, lowercase letters and numbers.</div>
+                            <p>
+                                <label>Password:</label>
+                                    <input id="pwd1" name="Password" type="password" placeholder="Enter your password" required>
+                                
+                            </p>
+							<p>
+                                <label>Confirm password:</label>
+                                    <input id="pwd2" name="NewPassword" type="password" placeholder="Enter your password again" required>
+                                
+                            </p>
+                        </fieldset>
+						<fieldset  id="optQuestions">
+                            <legend>Optional questions</legend>
+                            <p>
+                                <label>Which browser are you currently using?</label>
+									<select>
+										<option value="0">-</option>
+										<option value="1">Mozilla Firefox</option>
+										<option value="2">Google Chrome</option>
+										<option value="3">Internet Explorer</option>
+										<option value="4">Safari</option>
+										<option value="5">Opera</option>
+										<option value="6">Other</option>
+									</select>
+								
+                            </p>
+							<p>
+                                <label>Telephone:</label>
+                                    <input id="tel" name="telephone" type="tel" placeholder="Pattern: 1-234-567-8910" pattern="([0-9]{1}(-[0-9]{3})(-[0-9]{3})(-[0-9]{4}))">
+                                
+                            </p>
+                        </fieldset>
+<p id="validate-status"></p>
+						<input type="submit" value="Submit"/>
+                    </form>
+                </div>
+            </div>
+            <div id="enter-container-bottom"></div>
+        </main>
+
+        <footer id="footer">
+            <div id="footer-top"></div>
+            <div id="footer-middle">
+                <div id="footer-content">
+                    &#169; 2013 - 2014 &#167;
+                    <a href="rules.html">Terms of service</a>
+                    &#167;
+                    <a href="support.html">Contact</a>
+                </div>
+            </div>
+            <div id="footer-bottom"></div>
+        </footer>
+
+    </div>
+    <div id="footer2">
+    </div>
+</body>
+
+</html>

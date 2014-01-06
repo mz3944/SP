@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Vis Vires</title>
+    <meta charset="UTF-8">
+	<meta name="application-name" content="Vis Vires" />
+    <meta name="author" content="Matej Zrimsek" />
+    <meta name="keywords" content="Webbrowser game, Vis Vires, Strategy" />
+    <link rel="stylesheet" type="text/css" href="css/master.css" />
+	<script src="js/jquery-1.10.2.js"></script>
+	<script type ="text/javascript"  src ="js/make.js" >
+    </script>
+	
+	<!--<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>-->
+
+<!--<script type="text/javascript">
+$(document).ready(function(){ 
+						   
+	$("div").css("border", "3px solid red");
+	
+});
+</script>-->
+</head>
+<body class="home buildings">
+    <div id="outer">
+    </div>
+    <div id="page-container">
+        <img title="tower top" id="tower-top" src="images/tower_top.png" alt="game navigation tower top" />
+        <img title="tower bottom" id="tower-bottom" src="images/tower_bottom.png" alt="game navigation tower bottom" />
+		<a id="music" target="_blank" href="music.html"><img title="play music" src="images/lyre.png" alt="play music" /></a>
+        <header id="header">
+            <h1><a href="home_buildings.html"><img title="logo" src="images/logo.png" alt="Vis Vires website logo" /></a></h1>
+        </header>
+
+        <nav id="navigation">
+            <ul>
+                <li id="home"><a href="home_buildings.html">Home</a>
+                </li>
+                <li id="help"><a href="help.html">Help</a>
+                    <ul>
+                        <li id="rules"><a href="rules.html">Rules</a></li>
+                            <li id="guide"><a href="guide.html">Guide</a></li>
+                                <li id="support"><a href="support.html">Support</a></li>
+                    </ul>
+                    </li>
+                    <li id="gallery"><a href="gallery.html">Gallery</a>
+                    </li>
+                    <li id="account"><a href="account.html">Account</a>
+                    </li>
+                    <li id="about"><a href="about.html">About</a>
+                    </li>
+            </ul>
+        </nav>
+
+        <main id="game-container">
+            <div id="info-bar">
+                <div id="info-bar-top"></div>
+                <div id="info-bar-middle">
+                    <div id="info-bar-content">
+                        <ul>
+                            <li>100</li>
+                            <li>100</li>
+                            <li>100</li>
+                            <li>100</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="info-bar-bottom"></div>
+            </div>
+
+            <nav id="game-navigation">
+                <div id="game-navigation-top"></div>
+                <div id="game-navigation-left"></div>
+                <div id="game-navigation-content">
+                    <ul>
+                        <li id="map"><a href="home_map.html">Map</a>
+                        </li>
+                        <li id="economy"><a href="home_economy.html">Economy</a>
+                        </li>
+                        <li id="buildings"><a href="home_buildings.html">Buildings</a>
+                        </li>
+                        <li id="technology"><a href="home_technology.html">Technology</a>
+                        </li>
+                        <li id="army"><a href="home_army.html">Army</a>
+                        </li>
+                        <li id="market"><a href="home_market.html">Market</a>
+                        </li>
+                        <li id="diplomacy"><a href="home_diplomacy.html">Diplomacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="game-navigation-right"></div>
+                <div id="game-navigation-bottom"></div>
+
+                <div id="logout">
+                    <ul>
+                        <li id="gates"><a href="home.html">Gates</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="game-area">
+                <div id="game-area-top"></div>
+                <div id="game-area-middle">
+                    <section id="game-area-content">
+                        <h2>Buildings</h2>
+                        <table>
+                            <tbody>
+                                <tr class="bb" data-fac="2.0">
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="wheat" src="images/buildings/wheat.png" alt="wheat" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Farm</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="lumber mill" src="images/buildings/lumber_mill.png" alt="lumber mill" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Lumber mill</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="stone query" src="images/buildings/stone_crafting.png" alt="stone query" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Stone query</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="iron mine" src="images/buildings/iron_mining.png" alt="iron mine" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Iron mine</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="armory" src="images/buildings/armory.png" alt="armory" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Armory</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="stone tower" src="images/buildings/stone_tower.png" alt="stone tower" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Stone wall</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="scales" src="images/buildings/scales.png" alt="scales" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Market</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="heart organ" src="images/buildings/heart-organ.png" alt="heart organ" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Hospital</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="horse hoof" src="images/buildings/hoof.png" alt="horse hoof" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Stable</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="gears" src="images/buildings/gears.png" alt="gears" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Siege workshop</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="candelabra" src="images/buildings/candelabra.png" alt="candelabra" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Church</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="anchor" src="images/buildings/anchor.png" alt="anchor" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Dock</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="archery target" src="images/buildings/archery-target.png" alt="archery target" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>archery range</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="nivel"><h4>0</h4></div>
+                                        <img title="capitol" src="images/buildings/capitol.png" alt="capitol" />
+                                    </td>
+                                    <td>
+                                        <div class="description">
+                                            <h3>Town center</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta sapien ac augue aliquam, vitae bibendum quam egestas.
+                                                Donec vitae viverra ipsum. Pellentesque malesuada justo a blandit venenatis.</p>
+                                            <div class="build">
+                                                <ul>
+                                                    <li class="seal">
+														<a "javascript:;" class="sealLink">Gates</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="costs" data-fac="2.0" >
+                                        <ul>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>25</li>
+                                            <li>00:00:02</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+                <div id="game-area-bottom"></div>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <div id="footer-top"></div>
+            <div id="footer-middle">
+                <div id="footer-content">
+                    &#169; 2013 - 2014 &#167;
+                    <a href="rules.html">Terms of service</a>
+                    &#167;
+                    <a href="support.html">Contact</a>
+                </div>
+            </div>
+            <div id="footer-bottom"></div>
+        </footer>
+    </div>
+    <div id="footer2">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translations>
+    <translation id="title">
+        <english>Hello there, how are you?</english>
+        <italian>Ciao, come stai?</italian>
+    </translation>
+	<translation class="login">
+        <english>Login</english>
+        <italian>Vpis</italian>
+    </translation>
+	<translation id="remember">
+        <english>Remember me</english>
+        <italian>Zapomni se me</italian>
+    </translation>
+	<translation id="username">
+        <english>User name:</english>
+        <italian>Uporabnisko ime:</italian>
+    </translation>	
+	<translation class="enter_button">
+        <english>Register now for free!</english>
+        <italian>Registriraj se zastonj zdaj!</italian>
+    </translation>	
+	<translation id="news-header">
+        <english>News</english>
+        <italian>Novice</italian>
+    </translation>	
+	<translation class="login_button">
+        <english>Login</english>
+        <italian>Vpisi se</italian>
+    </translation>	
+	<translation id="terms_link">
+        <english>Terms of service</english>
+        <italian>Pogoji uporabe</italian>
+    </translation>
+	<translation id="contact_link">
+        <english>Contact</english>
+        <italian>Kontakt</italian>
+    </translation>
+	<translation id="password">
+        <english>Password:</english>
+        <italian>Geslo:</italian>
+    </translation>
+	<translation id="welcome_text">
+        <english>Vis Vires, which in latin stands for "force, power, strength, might and influence", is a webbrowser based strategy game based on medieval times.</english>
+        <italian>Vis Vires, kar po latinsko pomeni "sila, moc, trdozivost, mogocnost in vpliv", je igra snovana na brskalniku, ki se odvija v srednjeveskem obdobju.</italian>
+    </translation>
+</translations>
