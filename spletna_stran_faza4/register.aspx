@@ -1,186 +1,9 @@
-﻿<%@ Page Language="C#" %>
-<%@ Imports MySql.Data.MySqlClient %>
-<%@ using System; %>
-<%@ Import Namespace="MySql.Data.MySqlClient" %>  
-<%@ Import Namespace="System.Net.Mail"%>  
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="spletna_stran_faza4.WebForm1" %>
 
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-<script runat="server">
-    
-    protected void btnsubmit_Click(object sender, EventArgs e)
-    {
-        if (Page.IsValid)
-        {
-            /*
-            string name = TxtName.Text; // Scrub user data
-
-            string connString = ConfigurationManager.ConnectionStrings["MyConsString"].ConnectionString;
-            SqlConnection conn = null;
-            try
-            {
-                conn = new SqlConnection(connString);
-                conn.Open();
-
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Conn = conn;
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "INSERT INTO dummyTable(name) Values (@var)";
-                    cmd.Parameters.AddWithValue("@var", name);
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    if (rowsAffected == 1)
-                    {
-                        //Success notification
-                    }
-                    else
-                    {
-                        //Error notification
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                //log error 
-                //display friendly error to user
-            }
-            finally
-            {
-                if (conn != null)
-                {
-                    //cleanup connection i.e close 
-                }
-            }
-            */
-
-            //define the connection reference and initialize it
-            MySql.Data.MySqlClient.MySqlConnection msqlConnection = null;
-            msqlConnection = new MySql.Data.MySqlClient.MySqlConnection(“server=localhost;user id=UserName;Password=UserPassword;database=DatabaseName;persist security info=False”);
-                //define the command reference
-            MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
-                //define the connection used by the command object
-            msqlCommand.Connection = this.msqlConnection;
-                //define the command text
-            msqlCommand.CommandText = "SELECT * FROM TestTable;";
-            try
-            {
-                //open the connection
-                this.msqlConnection.Open();
-                //use a DataReader to process each record
-                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
-                while (msqlReader.Read())
-                {
-                    //do something with each record
-                }
-            }
-            catch (Exception er)
-            {
-                //do something with the exception
-            }
-            finally
-            {
-                //always close the connection
-                this.msqlConnection.Close();
-            }
-            
-            
-            
-            
-            
-            string cnnString = ConfigurationManager.ConnectionStrings["mysql.lrk.si"].ConnectionString;
-            string cmd = "insert into Insert values(@City,@FName,@LName)";
-            using (SqlConnection cnn = new SqlConnection(cnnString))
-            {
-                using (SqlCommand cmd = new SqlCommand(cmd, cnn))
-                {
-                    cmd.Parameters.AddWithValue("@City", txtCity.Text);
-                    cmd.Parameters.AddWithValue("@FName", txtFName.Text);
-                    cmd.Parameters.AddWithValue("@LName", txtLName.Text);
-
-                    cnn.Open();
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            
-            lblmsg.ForeColor = System.Drawing.ColorTranslator.FromHtml("Blue");
-            lblmsg.Text = "You have successfully registered your account!";
-        }
-     /*   else
-        {
-            lblmsg.Text = "Fill up all the fields";
-        }*/
-        //TextBox4.Text = "";
-        //TextBox5.Text = "";
-    }
-
-    void NameValidation(object source, ServerValidateEventArgs args)
-    {
-
-        try
-        {
-
-            string input = args.Value;
-            //args.IsValid = ((i % 2) == 0);
-
-            Match match = Regex.Match(input, @"^[a-zA-Z ]+$"); // RegexOptions.IgnoreCase);
-
-            if (!match.Success)
-            {
-                CustomValidator1.ErrorMessage = "Only alphabets are allowed!";
-                args.IsValid = false;
-            }
-            else if (input.Length < 3)
-            {
-                CustomValidator1.ErrorMessage = "Length of name must be between 3-30!";
-                args.IsValid = false;
-            }
-            else
-                args.IsValid = true;
-            
-        } catch (Exception ex)
-        {
-            args.IsValid = false;
-        }
-
-    }
-
-    void SurnameValidation(object source, ServerValidateEventArgs args)
-    {
-
-        try
-        {
-
-            string input = args.Value;
-            //args.IsValid = ((i % 2) == 0);
-
-            Match match = Regex.Match(input, @"^[a-zA-Z ]+$"); // RegexOptions.IgnoreCase);
-
-            if (!match.Success)
-            {
-                CustomValidator2.ErrorMessage = "Only alphabets are allowed!";
-                args.IsValid = false;
-            }
-            else if (input.Length < 3)
-            {
-                CustomValidator2.ErrorMessage = "Length of surname must be between 3-30!";
-                args.IsValid = false;
-            }
-            else
-                args.IsValid = true;
-
-        }
-        catch (Exception ex)
-        {
-            args.IsValid = false;
-        }
-
-    }
-</script>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>Vis Vires</title>
     <meta charset="UTF-8">
     <meta name="application-name" content="Vis Vires" />
@@ -415,7 +238,7 @@
                                         Telephone:
                                     </td>
                                     <td class="style2">
-                                        <asp:TextBox ID="TextBox6" runat="server" style="width:130px" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox6" runat="server" style="width:130px" ></asp:TextBox>
                                     </td>
                                     <td>
                                         <asp:RegularExpressionValidator ID="RegularExpressionValidator10" runat="server" 
@@ -462,3 +285,9 @@
 </body>
 
 </html>
+<%--  --%>
+<asp:checkbox runat="server"></asp:checkbox>
+<asp:checkboxlist runat="server"></asp:checkboxlist>
+<asp:dropdownlist runat="server"></asp:dropdownlist>
+<asp:hiddenfield runat="server" ID="safsaf"></asp:hiddenfield>
+<asp:radiobutton runat="server" ID="asfasf"></asp:radiobutton>

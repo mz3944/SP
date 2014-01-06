@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -7,8 +9,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
-
-public partial class home_diplomacy : System.Web.UI.Page
+namespace spletna_stran_faza4
+{
+    public partial class home_dip : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -171,4 +174,4 @@ public partial class home_diplomacy : System.Web.UI.Page
         charttype.Value = charttypeddl.SelectedValue;
 
     }
-}
+}}

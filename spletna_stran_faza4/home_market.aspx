@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="home_market.aspx.cs" Inherits="home_market" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home_market.aspx.cs" Inherits="spletna_stran_faza4.home_market1" %>
 
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-<head runat="server">
+<head id="Head1" runat="server">
     <title>Vis Vires</title>
     <meta charset="UTF-8" />
 	<meta name="application-name" content="Vis Vires" />

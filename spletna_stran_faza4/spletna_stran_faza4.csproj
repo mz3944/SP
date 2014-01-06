@@ -67,7 +67,6 @@
     <Content Include="Copy of register.aspx" />
     <Content Include="Copy of register.html" />
     <Content Include="css\master.css" />
-    <Content Include="Default.aspx" />
     <Content Include="gallery.html" />
     <Content Include="guide.html" />
     <Content Include="help.html" />
@@ -78,8 +77,8 @@
     <Content Include="home_diplomacy.html" />
     <Content Include="home_economy.html" />
     <Content Include="home_map.html" />
-    <Content Include="home_market.aspx" />
     <Content Include="home_market.html" />
+    <Content Include="home_market.aspx" />
     <Content Include="home_technology.html" />
     <Content Include="images\army\barbed-spear.png" />
     <Content Include="images\army\battle-axe.png" />
@@ -208,33 +207,43 @@
     <Content Include="multimedia\MedievalBattleMusic.mp3" />
     <Content Include="music.html" />
     <Content Include="MySql.Data.dll" />
-    <Content Include="register.aspx" />
     <Content Include="register.html" />
     <Content Include="rules.html" />
     <Content Include="support.html" />
     <Content Include="Web.config" />
+    <Content Include="register.aspx" />
     <Content Include="xml\languages.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Class1.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="home_diplomacy.aspx.cs">
       <DependentUpon>home_diplomacy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home_diplomacy.aspx.designer.cs">
+      <DependentUpon>home_diplomacy.aspx</DependentUpon>
     </Compile>
     <Compile Include="home_market.aspx.cs">
       <DependentUpon>home_market.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="home_market.aspx.designer.cs">
+      <DependentUpon>home_market.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -253,7 +262,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>2901</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:2476/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

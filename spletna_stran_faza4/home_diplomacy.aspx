@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="home_diplomacy.aspx.cs" Inherits="home_diplomacy" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home_diplomacy.aspx.cs" Inherits="spletna_stran_faza4.home_dip" %>
 
 <!DOCTYPE html>
 

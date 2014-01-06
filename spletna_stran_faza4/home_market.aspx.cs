@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -6,8 +8,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
-
-public partial class home_market : System.Web.UI.Page
+namespace spletna_stran_faza4
+{
+    public partial class home_market1 : System.Web.UI.Page
 {
     String connectionString = @"Server=mysql.lrk.si;Database=mz3944_b1;User ID=mz3944;Password=12comand12";
 
@@ -80,3 +83,4 @@ public partial class home_market : System.Web.UI.Page
         }
     }
 }
+    }
