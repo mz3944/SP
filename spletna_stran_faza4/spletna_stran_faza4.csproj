@@ -67,6 +67,7 @@
     <Content Include="gallery.html" />
     <Content Include="guide.html" />
     <Content Include="help.html" />
+    <Content Include="home.aspx" />
     <Content Include="home.html" />
     <Content Include="home_army.html" />
     <Content Include="home_buildings.html" />
@@ -209,6 +210,13 @@
     <Content Include="xml\languages.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="home_diplomacy.aspx.cs">
       <DependentUpon>home_diplomacy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
