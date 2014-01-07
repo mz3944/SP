@@ -201,6 +201,7 @@
     <Content Include="js\translate.js" />
     <Content Include="multimedia\MedievalBattleMusic.mp3" />
     <Content Include="music.html" />
+    <Content Include="MySql.Data.dll" />
     <Content Include="rules.html" />
     <Content Include="support.html" />
     <Content Include="Web.config" />
