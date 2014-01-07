@@ -142,7 +142,7 @@
 
                 <div id="logout">
                     <ul>
-                        <li id="gates"><a href="home.html">Gates</a>
+                        <li id="gates"><a href="home.aspx">Gates</a>
                         </li>
                     </ul>
                 </div>

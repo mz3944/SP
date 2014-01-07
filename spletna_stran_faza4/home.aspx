@@ -31,12 +31,12 @@
 			<canvas id="flag" height="151";></canvas>
 		</div>
         <header id="header">
-            <h1><a href="home.html"><img title="logo" src="images/logo.png" alt="Vis Vires" /></a></h1> 
+            <h1><a href="home.aspx"><img title="logo" src="images/logo.png" alt="Vis Vires" /></a></h1> 
         </header>
 
         <nav id="navigation">
             <ul>
-                <li id="home"><a href="home.html">Home</a>
+                <li id="home"><a href="home.aspx">Home</a>
                 </li>
                 <li id="help"><a href="help.html">Help</a>
                     <ul>
@@ -73,24 +73,22 @@
                         <form id="form1" runat="server">
                             <p>
                                 <label id="username"><strong><strong>User name:</strong></strong>
-                                    <br>
+                                    <br/>
                                     <asp:TextBox name="username"  size="25" ID="TextBox1" runat="server"></asp:TextBox>
                                 </label>
                             </p>
                             <p>
                                 <label id="password"><strong>Password:</strong> 
-                                    <br>
-                                    <asp:TextBox name="password" size="25" ID="TextBox2" runat="server"></asp:TextBox>
+                                    <br/>
+                                    <asp:TextBox name="password" type="password" size="25" ID="TextBox2" runat="server"></asp:TextBox>
                                 </label>
                             </p>
                             <p>
                                 <label id="remember">
-                                    <input name="cookie" type="checkbox" value="true">Remember me
+                                    <input name="cookie" type="checkbox" value="true"/>Remember me
                                 </label>
                             </p>
-                            <a class="login_button" href="home_buildings.html">
-                                <div class="login"><asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click1"></asp:Button></div>
-                            </a>
+                            <div class="login"><asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click1"></asp:Button></div>
                         </form>
 
                     </div>

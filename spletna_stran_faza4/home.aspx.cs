@@ -12,6 +12,8 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace spletna_stran_faza4
 {
@@ -22,11 +24,27 @@ public partial class home : System.Web.UI.Page
    
     }
 
+    public string ComputeHash(string input, HashAlgorithm algorithm)
+    {
+        Byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+
+        Byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
+
+        return BitConverter.ToString(hashedBytes);
+    }
+
+    private bool IsPasswordValid(string passwordToValidate, string correctPasswordHash)
+    {
+        string hashedPassword = ComputeHash(passwordToValidate, new SHA256CryptoServiceProvider());
+
+        return hashedPassword.Equals(correctPasswordHash);
+    }
+
     protected void Button1_Click1(object sender, EventArgs e)
     {
         String connectionString = @"Server=mysql.lrk.si;Database=mz3944_b1;User ID=mz3944;Password=12comand12";
         MySqlConnection conn = new MySqlConnection(connectionString);
-        MySqlCommand cmd = new MySqlCommand("Select * from User where username = '" + TextBox1.Text + "' and password = '" + TextBox2.Text + "'", conn);
+        MySqlCommand cmd = new MySqlCommand("Select password from User where username = '" + TextBox1.Text + "'", conn);//        MySqlCommand cmd = new MySqlCommand("Select * from User where username = '" + TextBox1.Text + "' and password = '" + TextBox2.Text + "'", conn);
 
         conn.Open();
         MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -34,16 +52,22 @@ public partial class home : System.Web.UI.Page
         DataSet a = new DataSet();
         da.Fill(a);
 
+        conn.Close();
+
         if (a.Tables[0].Rows.Count > 0)
         {
-            Response.Redirect("home_buildings.html");
-            Label1.Visible = false;
+            string hashedPass = Convert.ToString(a.Tables[0].Rows[0][0]);
+            bool isValid = IsPasswordValid(TextBox2.Text, hashedPass);
+
+            if(isValid) {
+                Response.Redirect("home_buildings.html");
+                Label1.Visible = false;
+                return;
+            }
         }
-        else
-        {
-            Label1.Text = "Wrong username and/or password!";
-            Label1.Visible = true;
-        }
+
+        Label1.Text = "Wrong username and/or password!";
+        Label1.Visible = true;
     }
 
 }

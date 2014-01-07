@@ -4,13 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
-
-
-
-
-
-
 using System.Text.RegularExpressions;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -18,6 +11,7 @@ using System.Data;
 using MySql.Data.MySqlClient;
 using System.Text;
 using System.Security.Cryptography;
+
 namespace spletna_stran_faza4
 {
 public partial class WebForm1 : System.Web.UI.Page
@@ -52,9 +46,7 @@ public partial class WebForm1 : System.Web.UI.Page
             //string name = TxtName.Text; // Scrub user data
             //MySqlConnection = null;
             String connectionString = @"Server=mysql.lrk.si;Database=mz3944_b1;User ID=mz3944;Password=12comand12";
-           
-            
-            
+
             // assets
             String cmdString = "insert into Goods values(); select LAST_INSERT_ID()";
             //String getIDString = "select @@Identity";
@@ -137,11 +129,6 @@ public partial class WebForm1 : System.Web.UI.Page
                         telephoneVal = null;
                     cmd.Parameters.AddWithValue("@telephone", telephoneVal);
 
-
-
-
-
-
                     cmd.Parameters.AddWithValue("@player_idfk", playerID);
 
                     cn.Open();
@@ -149,11 +136,7 @@ public partial class WebForm1 : System.Web.UI.Page
                     cn.Close();
                 }
 
-            }
-            
-
-
-
+            }        
 
 /*
             MySql.Data.MySqlClient.MySqlConnection conn;
@@ -260,10 +243,7 @@ public partial class WebForm1 : System.Web.UI.Page
             //    //always close the connection
             //    this.msqlConnection.Close();
             //}
-            
-            
-            
-            
+              
             
             //string cnnString = ConfigurationManager.ConnectionStrings["mysql.lrk.si"].ConnectionString;
             //string cmd = "insert into Insert values(@City,@FName,@LName)";
@@ -296,7 +276,6 @@ public partial class WebForm1 : System.Web.UI.Page
 
         try
         {
-
             string input = args.Value;
             //args.IsValid = ((i % 2) == 0);
 

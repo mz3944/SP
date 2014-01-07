@@ -290,6 +290,11 @@ a.enter_button:hover, a.login_button:hover {
     color: white;
 }
 
+.login
+{
+    padding-left: 60px;
+}
+
 #game-container {
     overflow: hidden;
     position: relative;

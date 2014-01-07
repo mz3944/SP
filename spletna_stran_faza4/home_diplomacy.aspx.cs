@@ -99,18 +99,6 @@ namespace spletna_stran_faza4
                 dataTable.Rows.Add(rows[i]);
             }*/
 
-
-
-
-
-
-
-
-
-
-
-
-
             //JavaScriptSerializer jSerializer = new JavaScriptSerializer();
 
             //string Jason1 = jSerializer.Serialize(ds.GetXml());
@@ -118,14 +106,6 @@ namespace spletna_stran_faza4
 
 
         }
-
-
-
-
-
-
-
-
     }
 
 
